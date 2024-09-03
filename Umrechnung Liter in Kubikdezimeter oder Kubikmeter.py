@@ -7,8 +7,8 @@ eingabeJaNein = 1
 while eingabeJaNein == 1:
 
 # Umrechnung von Liter in Kubikdezimeter und Kubikmeter
-    wahl = input("gib eine Auswahl zwischen Liter, Kubikdezimeter oder Kubikmeter an: ")
-    if wahl == "Liter":
+    wahl = input("gib eine Auswahl zwischen Liter, Kubikdezimeter oder Kubikmeter an: ").lower()
+    if wahl == "liter":
         inputLiter = float(input("Gib den Wert in Liter an: "))
         outputKubikdezi = inputLiter * umrechnungsfaktor1
         print(inputLiter,"Liter sind",outputKubikdezi,"dm³")
@@ -16,7 +16,7 @@ while eingabeJaNein == 1:
         print(inputLiter,"Liter sind",outputKubikmeter,"m³")
 
 # Umrechnung von Kubikdezimeter in Liter und Kubikmeter
-    elif wahl == "Kubikdezimeter":
+    elif wahl == "kubikdezimeter":
         inputKubikdezi = float(input("Gib den Wert in Kubikdezimeter an: "))
         outputLiter = inputKubikdezi * umrechnungsfaktor1
         print(inputKubikdezi,"dm³ sind",outputLiter,"Liter")
@@ -24,7 +24,7 @@ while eingabeJaNein == 1:
         print(inputKubikdezi,"dm³ sind",outputKubikmeter,"m³")
     
 # Umrechnung von Kubikmeter in Liter und Kubikdezimeter
-    elif wahl == "Kubikmeter":
+    elif wahl == "kubikmeter":
         inputKubikmeter = float(input("Gib den Wert in Kubikmeter an: "))
         outputLiter = inputKubikmeter * umrechnungsfaktor1000
         print(inputKubikmeter,"m³ sind",outputLiter,"Liter")
@@ -33,8 +33,8 @@ while eingabeJaNein == 1:
 
 
 # Sprung zum Anfang (while-Schleife)
-    neueEingabe = input("Willst du eine neue Umrechnung machen? Ja oder Nein? ")
-    if neueEingabe == "Ja":
+    neueEingabe = input("Willst du eine neue Umrechnung machen? Ja oder Nein? ").lower()
+    if neueEingabe == "ja":
         eingabeJaNein = 1
-    elif neueEingabe == "Nein":
+    elif neueEingabe == "nein":
         eingabeJaNein = 0
